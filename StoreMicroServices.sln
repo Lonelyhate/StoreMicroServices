@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{05241847-ECAF-42A1-B48B-066CF6723175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Web", "Store.Web\Store.Web.csproj", "{0B582809-1A03-4DA7-A50F-FD8EE6592D33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A7B6947B-810E-47EB-80FD-05393F77717B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Services.ProductAPI", "Store.Services.ProductAPI\Store.Services.ProductAPI.csproj", "{493E34BA-8AD4-453E-BCAE-62D7660F2A5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B582809-1A03-4DA7-A50F-FD8EE6592D33} = {05241847-ECAF-42A1-B48B-066CF6723175}
+		{493E34BA-8AD4-453E-BCAE-62D7660F2A5E} = {A7B6947B-810E-47EB-80FD-05393F77717B}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B582809-1A03-4DA7-A50F-FD8EE6592D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B582809-1A03-4DA7-A50F-FD8EE6592D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B582809-1A03-4DA7-A50F-FD8EE6592D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B582809-1A03-4DA7-A50F-FD8EE6592D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493E34BA-8AD4-453E-BCAE-62D7660F2A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493E34BA-8AD4-453E-BCAE-62D7660F2A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493E34BA-8AD4-453E-BCAE-62D7660F2A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493E34BA-8AD4-453E-BCAE-62D7660F2A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
