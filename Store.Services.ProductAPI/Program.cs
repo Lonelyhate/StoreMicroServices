@@ -4,7 +4,8 @@ using Store.Services.ProductAPI;
 using Store.Services.ProductAPI.DbContexts;
 using Store.Services.ProductAPI.Repository;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(
+    new WebApplicationOptions {WebRootPath = "static"});
 
 // Add services to the container.
 
@@ -27,6 +28,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
