@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "D02gaGoYmtXyp1/RIgsU3KprOvCFoG1KAFCqNKlaWecVsUyD7RRnSVfUj7mowyLbA6MKa1wSgZ9e+vqbs2rI1Q==",
+  "dgSpecHash": "z/jgMXoDghcvE0WDJ2oBaHa6KAEvkH0TmAXvmr4GdQzvGwLlbVW0a3HINfFHTv7epjtquvJ8m7Y1SnkJtyOK2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikit\\Desktop\\Projects\\StoreMicroServices\\Store.Web\\Store.Web.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\StoreMicroServices\\Store.Web\\Store.Web.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nikit\\.nuget\\packages\\newtonsoft.json\\13.0.2-beta3\\newtonsoft.json.13.0.2-beta3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.2-beta3\\newtonsoft.json.13.0.2-beta3.nupkg.sha512"
   ],
   "logs": []
 }

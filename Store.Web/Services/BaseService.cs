@@ -24,6 +24,7 @@ public class BaseService : IBaseService
             var client = _httpClient.CreateClient("StoreAPI");
             HttpRequestMessage message = new HttpRequestMessage();
             message.Headers.Add("Accept", "application/json");
+            Console.WriteLine(apiRequest.Url);
             message.RequestUri = new Uri(apiRequest.Url);
             client.DefaultRequestHeaders.Clear();
             if (apiRequest.Data is not null)
@@ -63,6 +64,7 @@ public class BaseService : IBaseService
                 ErrorMessage = new List<string> { Convert.ToString(e.Message) },
                 IsSuccess = false
             };
+            Console.WriteLine(e.Message);
             var res = JsonConvert.SerializeObject(dto);
             var apiResponseDto = JsonConvert.DeserializeObject<T>(res);
             return apiResponseDto;
