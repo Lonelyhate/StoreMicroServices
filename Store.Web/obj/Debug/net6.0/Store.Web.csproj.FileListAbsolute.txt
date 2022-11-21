@@ -57,3 +57,5 @@ C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\obj\Debug\net6.0\St
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\obj\Debug\net6.0\ref\Store.Web.dll
 C:\Users\User\RiderProjects\StoreMicroServices\Store.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\User\RiderProjects\StoreMicroServices\Store.Web\obj\Debug\net6.0\Store.Web.csproj.CopyComplete
+C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\obj\Debug\net6.0\Store.Web.csproj.CopyComplete
