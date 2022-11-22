@@ -26,8 +26,14 @@ public class ProductController : Controller
         return View(list);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> ProductCreate()
+    {
+        return View();
+    }
+
     [HttpPost]
-    //[ValidateAntiForgeryToken]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> ProductCreate(ProductDto model)
     {
         if (ModelState.IsValid)
@@ -40,4 +46,33 @@ public class ProductController : Controller
         }
         return View(model);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> ProductEdit(int productId)
+    {
+        var response = await _productService.GetProductByIdAsync<ResponseDto>(productId);
+        if (response is not null && response.IsSuccess)
+        {
+            ProductDto productDto = JsonConvert.DeserializeObject<ProductDto>(response.Result.ToString());
+            return View(productDto);
+        }
+        return NotFound();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ProductEdit(ProductDto model)
+    {
+        if (ModelState.IsValid)
+        {
+            var response = await _productService.UpdateProductAsync<ResponseDto>(model);
+            if (response != null && response.IsSuccess)
+            {
+                return RedirectToAction(nameof(ProductIndex));
+            }
+        }
+
+        return View(model);
+    }
+    
 }

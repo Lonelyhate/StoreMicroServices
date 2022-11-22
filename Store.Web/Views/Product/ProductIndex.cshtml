@@ -25,7 +25,7 @@
                     <td>@item.CategoryName</td>
                     <td>@item.Price.ToString("c")</td>
                     <td>
-                        <a asp-action="" class="btn btn-success" asp-route-productId="@item.ProductId"><i class="fas fa-edit"></i></a>
+                        <a asp-action="ProductEdit" class="btn btn-success" asp-route-productId="@item.ProductId"><i class="fas fa-edit"></i></a>
                         <a asp-action="" class="btn btn-danger" asp-route-productId="@item.ProductId"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
