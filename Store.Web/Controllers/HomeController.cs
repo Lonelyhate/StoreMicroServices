@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Store.Web.Models;
 
@@ -21,6 +22,17 @@ public class HomeController : Controller
     public IActionResult Privacy()
     {
         return View();
+    }
+
+    [Authorize]
+    public IActionResult Login()
+    {
+        return RedirectToAction(nameof(Index));
+    }
+
+    public IActionResult Logout()
+    {
+        return SignOut("Cookies", "iodc");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

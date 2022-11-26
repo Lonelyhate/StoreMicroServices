@@ -37,18 +37,18 @@ public static class SD
             },
             new Client
             {
-                ClientId = "Store",
-                ClientSecrets = { new Secret("secret".Sha256())},
+                ClientId="store",
+                ClientSecrets= { new Secret("secret".Sha256())},
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = {"https://localhost:44396/signin-oidc"},
-                PostLogoutRedirectUris = { "https://localhost:44396/signout-callback-oidc" },
-                AllowedScopes = new List<string>
+                RedirectUris={ "https://localhost:7139/signin-oidc" },
+                PostLogoutRedirectUris={"https://localhost:7139/signout-callback-oidc" },
+                AllowedScopes=new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
                     "store"
                 }
-            }
+            },
         };
 }
