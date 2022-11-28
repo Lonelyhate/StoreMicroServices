@@ -32,7 +32,7 @@ public class HomeController : Controller
 
     public IActionResult Logout()
     {
-        return SignOut("Cookies", "iodc");
+        return SignOut("Cookies", "oidc");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
