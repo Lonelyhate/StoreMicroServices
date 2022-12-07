@@ -135,3 +135,4 @@ C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Services.ProductAPI\obj
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Services.ProductAPI\obj\Debug\net6.0\Store.Services.ProductAPI.pdb
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Services.ProductAPI\obj\Debug\net6.0\Store.Services.ProductAPI.genruntimeconfig.cache
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Services.ProductAPI\obj\Debug\net6.0\ref\Store.Services.ProductAPI.dll
+C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Services.ProductAPI\bin\Debug\net6.0\Newtonsoft.Json.dll

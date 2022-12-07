@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Services.ProductAPI",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Services.Identity", "Store.Services.Identity\Store.Services.Identity.csproj", "{D198B60D-2658-4846-8675-F716FBBD3029}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Services.ShoppingCartAPI", "Store.Services.ShoppingCartAPI\Store.Services.ShoppingCartAPI.csproj", "{0B6DB7BE-12C9-44FC-B3B1-2C23ED407148}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,7 @@ Global
 		{0B582809-1A03-4DA7-A50F-FD8EE6592D33} = {05241847-ECAF-42A1-B48B-066CF6723175}
 		{493E34BA-8AD4-453E-BCAE-62D7660F2A5E} = {A7B6947B-810E-47EB-80FD-05393F77717B}
 		{D198B60D-2658-4846-8675-F716FBBD3029} = {A7B6947B-810E-47EB-80FD-05393F77717B}
+		{0B6DB7BE-12C9-44FC-B3B1-2C23ED407148} = {A7B6947B-810E-47EB-80FD-05393F77717B}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0B582809-1A03-4DA7-A50F-FD8EE6592D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,5 +36,9 @@ Global
 		{D198B60D-2658-4846-8675-F716FBBD3029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D198B60D-2658-4846-8675-F716FBBD3029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D198B60D-2658-4846-8675-F716FBBD3029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6DB7BE-12C9-44FC-B3B1-2C23ED407148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6DB7BE-12C9-44FC-B3B1-2C23ED407148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6DB7BE-12C9-44FC-B3B1-2C23ED407148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6DB7BE-12C9-44FC-B3B1-2C23ED407148}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

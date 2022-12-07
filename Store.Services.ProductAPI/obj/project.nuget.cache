@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QYjW9qhkWd51+ytnbBkNT3cmhnHIjhZfORknj0rkbIq9gf8LoKA8q30nKgEu2tWcFZ3qzuNNC6T6SNLDWLCQVw==",
+  "dgSpecHash": "6AT8SzDX+Frc44moVTV7CRX76ZASxTtvCjhwa+fWSk8YPdAkSlEkinGtPvrrjyta36uOqN3FDuyrPBDTjDP5Cw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nikit\\Desktop\\Projects\\StoreMicroServices\\Store.Services.ProductAPI\\Store.Services.ProductAPI.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\nikit\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\nikit\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\nikit\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\nikit\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\nikit\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\nikit\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.4.0\\swashbuckle.aspnetcore.annotations.6.4.0.nupkg.sha512",
     "C:\\Users\\nikit\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
