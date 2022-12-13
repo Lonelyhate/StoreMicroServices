@@ -68,3 +68,40 @@ C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\bin\Debug\net6.0\Mi
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\nikit\Desktop\Projects\StoreMicroServices\Store.Web\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\appsettings.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Store.Web.staticwebassets.runtime.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Store.Web.exe
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Store.Web.deps.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Store.Web.runtimeconfig.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Store.Web.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Store.Web.pdb
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.AssemblyInfo.cs
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.RazorAssemblyInfo.cache
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.RazorAssemblyInfo.cs
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\scopedcss\bundle\Store.Web.styles.css
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\scopedcss\projectbundle\Store.Web.bundle.scp.css
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.csproj.CopyComplete
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\refint\Store.Web.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.pdb
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\Store.Web.genruntimeconfig.cache
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Web\obj\Debug\net6.0\ref\Store.Web.dll
