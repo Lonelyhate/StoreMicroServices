@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Store.Web;
 using Store.Web.Services;
 using Store.Web.Services.IServices;
@@ -25,6 +26,8 @@ builder.Services.AddAuthentication(options =>
         options.ClientId = "store";
         options.ClientSecret = "secret";
         options.ResponseType = "code";
+        options.ClaimActions.MapJsonKey("role", "role", "role");
+        options.ClaimActions.MapJsonKey("sub", "sub", "sub");
         options.TokenValidationParameters.NameClaimType = "name";
         options.TokenValidationParameters.RoleClaimType = "role";
         options.Scope.Add("store");

@@ -38,6 +38,7 @@ public class CartController : Controller
     [HttpPost("AddCart")]
     public async Task<object> AddCart(CartDto cartDto)
     {
+        Console.WriteLine(1);
         try
         {
             CartDto cart = await _cartRepository.CreateUpdateCart(cartDto);

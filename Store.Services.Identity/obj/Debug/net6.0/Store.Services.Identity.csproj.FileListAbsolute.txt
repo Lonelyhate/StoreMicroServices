@@ -151,3 +151,4 @@ C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.S
 C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Services.Identity\obj\Debug\net6.0\Store.Services.Identity.pdb
 C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Services.Identity\obj\Debug\net6.0\Store.Services.Identity.genruntimeconfig.cache
 C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Services.Identity\obj\Debug\net6.0\ref\Store.Services.Identity.dll
+C:\Users\User\OneDrive - Advalange\Рабочий стол\MicroServices\Store.Services.Identity\bin\Debug\net6.0\keys\is-signing-key-B89FBDF8B9B02F0EFEAB5CCA092E46BE.json

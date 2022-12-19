@@ -1,9 +1,11 @@
 ﻿using System.Diagnostics;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Store.Web.Models;
+using Store.Web.Models.Carts.Dto;
 using Store.Web.Models.Dto;
 using Store.Web.Services.IServices;
 
@@ -13,11 +15,13 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly IProductService _productService;
+    private readonly ICartService _cartService;
 
-    public HomeController(ILogger<HomeController> logger, IProductService productService)
+    public HomeController(ILogger<HomeController> logger, IProductService productService, ICartService cartService)
     {
         _logger = logger;
         _productService = productService;
+        _cartService = cartService;
     }
 
     public async Task<IActionResult> Index()
@@ -63,6 +67,46 @@ public class HomeController : Controller
         if (response is not null && response.IsSuccess)
         {
             productDto = JsonConvert.DeserializeObject<ProductDto>(response.Result.ToString());
+        }
+
+        return View(productDto);
+    }
+
+    [HttpPost]
+    [ActionName("Details")]
+    [Authorize]
+    public async Task<IActionResult> DetailsPost(ProductDto productDto)
+    {
+        CartDto cartDto = new()
+        {
+            CartHeader = new CartHeaderDto
+            {
+                UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value,
+                CuponCode = "test"
+            }
+        };
+
+        CartDetailsDto cartDetails = new CartDetailsDto()
+        {
+            Count = productDto.Count,
+            ProductId = productDto.ProductId,
+            CartHeader = cartDto.CartHeader
+        };
+
+        var resp = await _productService.GetProductByIdAsync<ResponseDto>(productDto.ProductId, "");
+        if(resp!=null && resp.IsSuccess)
+        {
+            cartDetails.Product = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(resp.Result));
+        }
+        List<CartDetailsDto> cartDetailsDtos = new();
+        cartDetailsDtos.Add(cartDetails);
+        cartDto.CartDetails = cartDetailsDtos;
+
+        var accessToken = await HttpContext.GetTokenAsync("access_token");
+        var addToCartResp = await _cartService.AddToCartAsync<ResponseDto>(cartDto, accessToken);
+        if (addToCartResp != null && addToCartResp.IsSuccess)
+        {
+            return RedirectToAction(nameof(Index));
         }
 
         return View(productDto);

@@ -25,7 +25,6 @@ public class BaseService : IBaseService
             var client = _httpClient.CreateClient("StoreAPI");
             HttpRequestMessage message = new HttpRequestMessage();
             message.Headers.Add("Accept", "application/json");
-            Console.WriteLine(apiRequest.Url);
             message.RequestUri = new Uri(apiRequest.Url);
             client.DefaultRequestHeaders.Clear();
             if (apiRequest.Data is not null)
@@ -33,10 +32,12 @@ public class BaseService : IBaseService
                 message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data), Encoding.UTF8,
                     "application/json");
             }
+            
 
             if (!string.IsNullOrEmpty(apiRequest.AccessToken))
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
+                Console.WriteLine(JsonConvert.SerializeObject(apiRequest.Data));
             }
 
             HttpResponseMessage apiResponse = null;
@@ -55,7 +56,7 @@ public class BaseService : IBaseService
                     message.Method = HttpMethod.Get;
                     break;
             }
-
+            
             apiResponse = await client.SendAsync(message);
 
             var apiContent = await apiResponse.Content.ReadAsStringAsync();

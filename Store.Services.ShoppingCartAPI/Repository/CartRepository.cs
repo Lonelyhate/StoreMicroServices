@@ -18,62 +18,74 @@ public class CartRepository : ICartRepository
 
     public async Task<CartDto> GetCartByUserId(string userId)
     {
-        Cart cart = new Cart()
+        Cart cart = new()
         {
             CartHeader = await _db.CartHeaders.FirstOrDefaultAsync(u => u.UserId == userId)
         };
 
-        cart.CartDetails = _db.CartDetails.Where(u => u.CartHeaderId == cart.CartHeader.CartHeaderId).Include(u => u.Product);
-
+        cart.CartDetails = _db.CartDetails
+            .Where(u => u.CartHeaderId == cart.CartHeader.CartHeaderId).Include(u=>u.Product);
         return _mapper.Map<CartDto>(cart);
     }
 
     public async Task<CartDto> CreateUpdateCart(CartDto cartDto)
     {
-        Cart cart = _mapper.Map<Cart>(cartDto);
+         Cart cart = _mapper.Map<Cart>(cartDto);
 
-        var prodInDb = await _db.Products
-            .FirstOrDefaultAsync(u => u.ProductId == cartDto.CartDetails.FirstOrDefault()
+            //check if product exists in database, if not create it!
+            var prodInDb = await _db.Products
+                .FirstOrDefaultAsync(u => u.ProductId == cartDto.CartDetails.FirstOrDefault()
                 .ProductId);
-        if (prodInDb is null)
-        {
-            _db.Add(cart.CartDetails.FirstOrDefault().Product);
-            await _db.SaveChangesAsync();
-        }
-
-        var cartHeaderFromDb = await _db.CartHeaders.AsNoTracking().FirstOrDefaultAsync(u => u.UserId == cart.CartHeader.UserId);
-        if (cartHeaderFromDb is null)
-        {
-            _db.CartHeaders.Add(cart.CartHeader);
-            await _db.SaveChangesAsync();
-            cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.CartHeaderId;
-            cart.CartDetails.FirstOrDefault().Product = null;
-            _db.CartDetails.Add(cart.CartDetails.FirstOrDefault());
-            _db.SaveChangesAsync();
-        }
-        else
-        {
-            var cartDetailsFromDb = await _db.CartDetails.AsNoTracking().FirstOrDefaultAsync(
-                u => u.ProductId == cart.CartDetails.FirstOrDefault().ProductId &&
-                     u.CartHeaderId == cartHeaderFromDb.CartHeaderId);
-
-            if (cartDetailsFromDb is null)
+            if (prodInDb == null)
             {
-                cart.CartDetails.FirstOrDefault().CartHeaderId = cartHeaderFromDb.CartHeaderId;
+                _db.Products.Add(cart.CartDetails.FirstOrDefault().Product);
+                await _db.SaveChangesAsync();
+            }
+
+
+            //check if header is null
+            var cartHeaderFromDb = await _db.CartHeaders.AsNoTracking()
+                .FirstOrDefaultAsync(u => u.UserId == cart.CartHeader.UserId);
+
+            if (cartHeaderFromDb == null)
+            {
+                //create header and details
+                _db.CartHeaders.Add(cart.CartHeader);
+                await _db.SaveChangesAsync();
+                cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.CartHeaderId;
                 cart.CartDetails.FirstOrDefault().Product = null;
                 _db.CartDetails.Add(cart.CartDetails.FirstOrDefault());
                 await _db.SaveChangesAsync();
             }
             else
             {
-                cart.CartDetails.FirstOrDefault().Product = null;
-                cart.CartDetails.FirstOrDefault().Count += cartDetailsFromDb.Count;
-                _db.CartDetails.Update(cart.CartDetails.FirstOrDefault());
-                await _db.SaveChangesAsync();
-            }
-        }
+                //if header is not null
+                //check if details has same product
+                var cartDetailsFromDb = await _db.CartDetails.AsNoTracking().FirstOrDefaultAsync(
+                    u => u.ProductId == cart.CartDetails.FirstOrDefault().ProductId &&
+                    u.CartHeaderId == cartHeaderFromDb.CartHeaderId);
 
-        return _mapper.Map<CartDto>(cart);
+                if (cartDetailsFromDb == null)
+                {
+                    //create details
+                    cart.CartDetails.FirstOrDefault().CartHeaderId = cartHeaderFromDb.CartHeaderId;
+                    cart.CartDetails.FirstOrDefault().Product = null;
+                    _db.CartDetails.Add(cart.CartDetails.FirstOrDefault());
+                    await _db.SaveChangesAsync();
+                }
+                else
+                {
+                    //update the count / cart details
+                    cart.CartDetails.FirstOrDefault().Product = null;
+                    cart.CartDetails.FirstOrDefault().Count += cartDetailsFromDb.Count;
+                    cart.CartDetails.FirstOrDefault().CartDetailsId = cartDetailsFromDb.CartDetailsId;
+                    cart.CartDetails.FirstOrDefault().CartHeaderId = cartDetailsFromDb.CartHeaderId;
+                    _db.CartDetails.Update(cart.CartDetails.FirstOrDefault());
+                    await _db.SaveChangesAsync();
+                }
+            }
+
+            return _mapper.Map<CartDto>(cart);
     }
 
     public async Task<bool> RemoveFromCart(int cartDetailsId)
